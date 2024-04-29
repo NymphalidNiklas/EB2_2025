@@ -1,6 +1,6 @@
 # Gene tree summary methods
 
-It is quite often observed that phylogenetic relationships inferred from single genes differs from the tree that is inferred using all the available data. Sometimes this is simply due to the single genes not having enough phylogenetic signal, and thus cannot resolve the relationships in question. But there are biological reasons why this would happen, of which two are well studied. The first is Incomplete Lineage Sorting (ILS), which basically means that gene polymorphisms in ancestral populations are carried over to the descendant species. This in turn means that some haplotypes in one species will be more related to haplotypes in another species than to other haplotypes in the same species. The second biological reason that can lead to so-called gene tree/species tree conflicts is hybridization (also called introgression or horizontal transfer). 
+It is quite often observed that phylogenetic relationships inferred from single genes differ from the tree that is inferred using all the available data. Sometimes this is simply due to the single genes not having enough phylogenetic signal, and thus they cannot resolve the relationships in question. But there are also biological reasons why this could happen, of which two are well studied. The first is Incomplete Lineage Sorting (ILS), which basically means that gene polymorphisms in ancestral populations are carried over to the descendant species. This in turn means that some haplotypes in one species will be more related to haplotypes in another species than to other haplotypes in the same species. The second biological reason that can lead to so-called gene tree/species tree conflicts is hybridization (also called introgression or horizontal transfer). 
 
 Various methods have been developed to investigate these patterns. We will use [ASTRAL-III](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2129-y). You can download the program from its [GitHub repository](https://github.com/smirarab/ASTRAL). [ASTRAL](https://doi.org/10.1093/bioinformatics/btu462) attempts to find the species tree that agrees with the largest number of quartet trees induced by the set of gene trees.
 
@@ -22,5 +22,6 @@ java -jar astral.5.7.8.jar -i Felidaeloci.treefile -o FelidaeASTRAL.tre 2>Felida
 ```
 
 Now have a look at the `FelidaeASTRAL.tre` file in **FigTree**. *Does it differ from the tree you have previously gotten when analysing concatenated data?* Have a look also at the FelidaeASTRAL.log file, it gives information about how the run has progressed.
-
+<--
 **Task for the afternoon**: you can make a concatenated dataset of all 15 genes, along with a gene partition file (as you did in [Tutorial 2](../2.Alignments), and then analyse this dataset in IQ-TREE (as you did in [Tutorial 3](../3.ModelSelection) and [Tutorial 5](../5.MaximumLikelihood)).
+-->
