@@ -22,7 +22,9 @@ Most likely we would like to report bootstrap and other support values on our tr
 
 <p align="center"><img src="./IQTREEsupport.png" alt="IQTREEsupport" width="600"></p>
 
-There are various other things you can do in **FigTree**, e.g. make the branches thicker, change the tree style, change the place of the tip labels, expand the tree, increase/decrease font sizes, etc. Play around a bit with the options. To further spice up your figure, e.g. to add pictures of the taxa in the tree, you can export the tree as a pdf file and import it into a graphics program like Adobe Illustrator, InkScape or even PowerPoint.
+There are various other things you can do in **FigTree**, e.g. make the branches thicker, change the tree style, change the place of the tip labels, expand the tree, increase/decrease font sizes, etc. Play around a bit with the options. In case you want to be able to come back and continue editing the tree file in Figree, go to File -> Export Trees, leave NEXUS as the format, check all the boxes, and save the file with a new name (with a .tre extension so FigTree can recognize it as a tree file).
+
+To further spice up your figure, e.g. to add pictures of the taxa in the tree, you can export the tree as a pdf file and import it into a graphics program like Adobe Illustrator, InkScape or even PowerPoint.
 
 ## Time trees
 
