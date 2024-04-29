@@ -5,7 +5,7 @@ Add your name to one of the rows in this spreadsheet [here](https://docs.google.
 
 You need to make a concatenated dataset of the 4 genes that have been assigned to you, along with a gene partition file (as you did in [Tutorial 2](../Tutorials/2.Alignments)), then analyse this dataset in IQ-TREE (as you did in [Tutorial 3](../Tutorials/3.ModelSelection) and [Tutorial 5](../Tutorials/5.MaximumLikelihood)), and finally in BEAST (as you did in [Tutorial 6](../Tutorials/6.TimingDivergence)).
 
-Make a short report including the resulting maximum likelihood tree with branch support as well as the BEAST tree showing the estimated times of divergence for the different lineages. In your report also answer the following three questions.
+Make a short report including the resulting maximum likelihood tree with branch support as well as the BEAST tree showing the estimated times of divergence for the different lineages. In your report also answer the following three questions. Please include your alignment together with the report.
 
 1) How does the alignment for the rRNA (12s and 16S are rRNA mitochondrial genes) gene looks compared to the protein-coding genes in your dataset?
 
@@ -17,4 +17,4 @@ Make a short report including the resulting maximum likelihood tree with branch 
 
 If you have any questions about the assignment, feel free to email us.
 
-The report is due on Friday, May 2 by midnight, and it is being graded on the pass/fail scale.
+The report is due on Friday, May 3 by midnight, and it is being graded on the pass/fail scale.
