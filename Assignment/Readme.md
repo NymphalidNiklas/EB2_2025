@@ -3,7 +3,7 @@
 Add your name to one of the rows in this spreadsheet [here](https://docs.google.com/spreadsheets/d/1jYOx_BCUWnR7IhMTmw4oaymGovGxao5-P4RBRpjKdDA/edit#gid=356692471). The genes marked in the row next to your name are the ones you need to analyse for the assignment.
 
 
-**Assignment** You need to make a concatenated dataset of the 4 genes that have been assigned to you, along with a gene partition file (as you did in [Tutorial 2](../Tutorials/2.Alignments)), then analyse this dataset in IQ-TREE (as you did in [Tutorial 3](../Tutorials/3.ModelSelection) and [Tutorial 5](../Tutorials/5.MaximumLikelihood)), and finally in BEAST (as you did in [Tutorial 6](../Tutorials/6.TimingDivergence)).
+You need to make a concatenated dataset of the 4 genes that have been assigned to you, along with a gene partition file (as you did in [Tutorial 2](../Tutorials/2.Alignments)), then analyse this dataset in IQ-TREE (as you did in [Tutorial 3](../Tutorials/3.ModelSelection) and [Tutorial 5](../Tutorials/5.MaximumLikelihood)), and finally in BEAST (as you did in [Tutorial 6](../Tutorials/6.TimingDivergence)).
 
 Make a short report including the resulting maximum likelihood tree with branch support as well as the BEAST tree showing the estimated times of divergence for the different lineages. In your report also answer the following three questions.
 
