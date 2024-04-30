@@ -75,7 +75,9 @@ remotes::install_github(repo="nmatzke/BioGeoBEARS")
 ```
 
 If R asks you if you want to update some packages first, you can just hit enter without typing anything and it should skip updating packages.
-This installation will do try to compile some packages so it is likely that it will take some time or fail altogether. If you are stuck at this step, just ask for help and we will try to solve the problem together.
+This installation will try to compile some packages so it is likely that it will take some time or fail altogether. If you are stuck at this step, just ask for help and we will try to solve the problem together.
+
+After a successful installation, you should close your RStudio program and reopen it before we continue.
 
 
 ### Running DEC models
@@ -128,34 +130,61 @@ After successfully running the code above, you should see a new file saved to yo
 
 #### DEC with alternative time stratification configurations
 
-The files that start with `DEC*_dispersal_multipliers` are the alternative time stratificaiton configurations. Can you figure out how to run three additional DEC models with the configurations DEC1, DEC2, and DEC3 using the wrapper function?
+The files that start with `DEC*_dispersal_multipliers` are the alternative time stratificaiton configurations. 
+Let us run those three additional DEC models with the configurations DEC1, DEC2, and DEC3 using the wrapper function.
+
+For the DEC1 model, we will specify a different file for the `multiplierfile=` argument to the function. This new file will have different dispersal multiplier matrices for different time sections. We also need to specify `section=TRUE` to state that the tree will be sectioned according to our time periods.
+
+```R
+run_dec(treefile = "FelidaeTimes_pruned_no_F_catus.tre", geofile = "Felidae_biogeo_data.txt",
+        multiplierfile = "DEC1_dispersal_multipliers.txt", maxrange = 2, timesfile = "time_periods.txt",
+        resultsfile = "DEC1_result.Rdata", section=TRUE)
+```
+
+For the DEC2 model, we will specify a different file for the `multiplierfile=` argument to the function. This new file will have different dispersal multiplier matrices for different time sections. We will keep `section=TRUE` to state that the tree will be sectioned according to our time periods.
+
+```R
+run_dec(treefile = "FelidaeTimes_pruned_no_F_catus.tre", geofile = "Felidae_biogeo_data.txt",
+        multiplierfile = "DEC2_dispersal_multipliers_NA_NT_disp_2mya.txt", maxrange = 2, timesfile = "time_periods.txt",
+        resultsfile = "DEC2_result.Rdata", section=TRUE)
+```
+
+For the DEC3 model, we will specify a different file for the `multiplierfile=` argument to the function. This new file will have different dispersal multiplier matrices for different time sections. We will keep `section=TRUE` to state that the tree will be sectioned according to our time periods.
+
+```R
+run_dec(treefile = "FelidaeTimes_pruned_no_F_catus.tre", geofile = "Felidae_biogeo_data.txt",
+        multiplierfile = "DEC3_dispersal_multipliers_NA_NT_disp_20mya.txt", maxrange = 2, timesfile = "time_periods.txt",
+        resultsfile = "DEC3_result.Rdata", section=TRUE)
+```
+
 
 ### Summarizing and visualizing the results
 
-When you run the code block has `source()` above, you should get two additional functions apart from the wrapper `run_dec()` function. These are `plot_models()` and `get_table()`. We will use these functions to compare our models. But first, we need to load the results from the results files. Assuming that you specified `resultsfile="DEC0_results.Rdata"`, `resultsfile="DEC1_results.Rdata"`, etc for DEC0, DEC1:
+When you run the code block has `source()` above, you should get two additional functions apart from the wrapper `run_dec()` function. These are `plot_models()` and `get_table()`. We will use these functions to compare our models. But first, we need to load the results from the results files. Assuming that you specified `resultsfile="DEC0_result.Rdata"`, `resultsfile="DEC1_result.Rdata"`, etc for DEC0, DEC1:
 
 ```R
-load("DEC0_results.Rdata")
+load("DEC0_result.Rdata")
 res_DEC0 = res
 
-load("DEC1_results.Rdata")
+load("DEC1_result.Rdata")
 res_DEC1 = res
 
-load("DEC2_results.Rdata")
+load("DEC2_result.Rdata")
 res_DEC2 = res
 
-load("DEC3_results.Rdata")
+load("DEC3_result.Rdata")
 res_DEC3 = res
+rm(res)
 ```
 
 Try this:
 
 ```R
-results = list(res_DEC0, res_DEC1, res_DEC2, res_dec3)
+results = list(DEC0=res_DEC0, DEC1=res_DEC1, DEC2=res_DEC2, DEC3=res_DEC3)
 get_table(results) 
 ```
 
-To compare two models, we can do:
+Now, we can statistically compare any time-stratified model against our null DEC0 model. We can compare DEC2 against DEC0 as an example:
 
 ```R
 LnL_2 = get_LnL_from_BioGeoBEARS_results_object(res_DEC2)
