@@ -65,13 +65,13 @@ First we should start by installing the required R package if you haven't done s
 ```R
 install.packages("rexpokit")
 install.packages("cladoRcpp")
-install.packages("devtools")
+install.packages("remotes")
 ```
 
 Then we will install BioGeoBEARS from GitHub.
 
 ```R
-devtools::install_github(repo="nmatzke/BioGeoBEARS")
+remotes::install_github(repo="nmatzke/BioGeoBEARS")
 ```
 
 If R asks you if you want to update some packages first, you can just hit enter without typing anything and it should skip updating packages.
