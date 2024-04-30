@@ -5,6 +5,7 @@ run_dec = function(
   library(rexpokit)
   library(cladoRcpp)
   library(BioGeoBEARS)
+  library(ape)
   trfn = treefile
   geogfn = geofile
   
