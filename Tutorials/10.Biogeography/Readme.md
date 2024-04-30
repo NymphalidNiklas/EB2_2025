@@ -49,11 +49,13 @@ END
 
 Furthermore, we can also create a time-stratified model. We know that the position of continents and the existence of various barriers or land bridges has changed over time. This information can be incorporated into our model by using a _time periods_ file as well as _dispersal multiplier matrices_ that are different for each time period. For our dataset, we will divide our tree into three sections, going from the root of the tree: 20-5 million years ago (mya), 5-2 mya, and 2-0 mya. The file with this information is called _time periods_.
 
-Download the time_periods.txt file from [here](../../Data/Day4/Biogeography/time_periods.txt) and save it into your working directory. Open the file in a text editor to see how it is organized.
+Download the time_periods.txt file from [here](../../Data/Day4/Biogeography/) and save it into your working directory. Open the file in a text editor to see how it is organized. These time periods are made based on the time-calibrated tree that we inferred in Tutorial 6.
 
 We also need to decide on the maximum number of areas that one species (as well as the ancestors) is allowed to occupy in our models. Looking at our tip data, there is one species that is present in all areas and that is the domestic cat _Felis catus_. However, this species became cosmopolitan with the help of humans and it makes this analysis more difficult so we decided to remove that tip (and the associated entry from the species distribution data). Looking at all of the other species, at most they are present in two areas so we want to set the maximum number of areas to 2. That way we limit the total number of area combinations that need to be explored by the model to 16 versus 32.
 
 You can download the pruned tree without the cat tip and all the other files we will need for this tutorial from [here](../../Data/Day4/Biogeography/). 
+
+You can also download the species distribution file from [here](../../Data/Day4/Biogeography/). 
 
 
 --------------------
