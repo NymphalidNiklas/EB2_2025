@@ -55,7 +55,7 @@ We also need to decide on the maximum number of areas that one species (as well 
 
 You can download the pruned tree without the cat tip and all the other files we will need for this tutorial from [here](../../Data/Day4/Biogeography/). 
 
-You can also download the species distribution file from [here](../../Data/Day4/Biogeography/). 
+You can also download the species distribution file from [here](../../Data/Day4/Biogeography/). The file is named Felidae_biogeo_data.txt. Open the file in a text editor to see how it is organized.
 
 
 --------------------
@@ -81,7 +81,7 @@ remotes::install_github(repo="nmatzke/BioGeoBEARS")
 If R asks you if you want to update some packages first, you can just hit enter without typing anything and it should skip updating packages.
 This installation will try to compile some packages so it is likely that it will take some time or fail altogether. If you are stuck at this step, just ask for help and we will try to solve the problem together.
 
-After a successful installation, you should close your RStudio program and reopen it before we continue.
+After a successful installation, you should ***close your RStudio program and reopen it*** before we continue.
 
 
 ### Running DEC models
