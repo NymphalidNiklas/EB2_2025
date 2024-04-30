@@ -22,7 +22,7 @@ The next thing to do is to copy the `Felidaeloci.treefile` file into the same di
 ```
 If you are a Windows user and cannot successfully run the above command, try using the `\` character instead of `/`.
 
-The command -o is used to designate the output file, which you should name 'FelidaeASTRAL.tre' and this is followed by the input file 'Felidaeloci.treefile'.
+The command -o is used to designate the output file, which you should name `FelidaeASTRAL.tre` and this is followed by the input file `Felidaeloci.treefile`.
 
 Now have a look at the `FelidaeASTRAL.tre` file in **FigTree**. *Does it differ from the tree you have previously gotten when analysing concatenated data?* Have a look also at the FelidaeASTRAL.log file, it gives information about how the run has progressed.
 <!--
