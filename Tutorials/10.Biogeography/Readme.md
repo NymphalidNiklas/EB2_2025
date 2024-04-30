@@ -80,7 +80,7 @@ This installation will do try to compile some packages so it is likely that it w
 
 ### Running DEC models
 
-we should start by running the following line of code by copying and pasting. This will allow you to use a wrapper function to use BioGeoBEARS in a more user friendly way.
+We should start by running the following line of code by copying and pasting. This will allow you to use a wrapper function to use BioGeoBEARS in a more user friendly way.
 
 ```R
 source("https://raw.githubusercontent.com/NymphalidNiklas/EB2_2023/main/Data/Day4/Biogeography/run_dec_f.R")
