@@ -184,6 +184,16 @@ results = list(DEC0=res_DEC0, DEC1=res_DEC1, DEC2=res_DEC2, DEC3=res_DEC3)
 get_table(results) 
 ```
 
+you should see a table like below.
+
+```
+             d          e        lnL
+DEC0 0.1098281 0.01632345 -108.71644
+DEC1 0.1190936 0.01222044  -98.39584
+DEC2 0.1372908 0.01273235  -98.89240
+DEC3 0.1145382 0.01364884  -98.83538
+```
+
 Now, we can statistically compare any time-stratified model against our null DEC0 model. We can compare DEC2 against DEC0 as an example:
 
 ```R
