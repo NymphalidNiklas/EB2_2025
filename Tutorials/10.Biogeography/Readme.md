@@ -116,7 +116,7 @@ The first model that we are going to run is a simple model with just one dispers
 | NT | 0.01 | 0.01 | 0.01 | 1    | 1    |
 
 
-To model DEC0, you can use the wrapper function like the example below (Assuming that you have downloaded all the required files)"
+To model DEC0, you can use the wrapper function like the example below (assuming that you have downloaded all the required files).
 
 ```R
 run_dec(treefile = "FelidaeTimes_pruned_no_F_catus.tre", geofile = "Felidae_biogeo_data.txt",
