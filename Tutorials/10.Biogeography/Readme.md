@@ -118,7 +118,7 @@ Download the DEC0 and DEC1 dispersal multiplier matrices from [here](../../Data/
 
 #### Comparison of DEC0 and DEC1 models - does limiting dispersal between some continents improve model fit?
 
-The first model that we are going to run is a simple model with just one dispersal rate multiplier matrix that doesn't change over time (no time stratification as explained above). Have a look at the values in the table and think about whether they make sense given the current position of continents and the large barriers to dispersal (e.g., Sahara dessert, oceans).
+Have a look at the values in the tables and think about whether they make sense given the current position of continents and the large barriers to dispersal (e.g., oceans).
 
 DEC0
 
@@ -151,33 +151,28 @@ run_dec(treefile = "FelidaeTimes_pruned_no_F_catus.tre", geofile = "Felidae_biog
 
 After successfully running the code above, you should see a new file saved to your working directory named `DEC0_result.Rdata`. 
 
-#### DEC with alternative time stratification configurations
-
-The files that start with `DEC*_dispersal_multipliers` are the alternative time stratificaiton configurations. 
-Let us run those three additional DEC models with the configurations DEC1, DEC2, and DEC3 using the wrapper function.
-
-For the DEC1 model, we will specify a different file for the `multiplierfile=` argument to the function. This new file will have different dispersal multiplier matrices for different time sections. We also need to specify `section=TRUE` to state that the tree will be sectioned according to our time periods.
+Then repeat this for DEC1.
 
 ```R
 run_dec(treefile = "FelidaeTimes_pruned_no_F_catus.tre", geofile = "Felidae_biogeo_data.txt",
-        multiplierfile = "DEC1_dispersal_multipliers.txt", maxrange = 2, timesfile = "time_periods.txt",
+        multiplierfile = "DEC1_dispersal_multipliers_no_time.txt", maxrange = 2, timesfile = "time_periods.txt",
         resultsfile = "DEC1_result.Rdata", section=TRUE)
 ```
 
-For the DEC2 model, we will specify a different file for the `multiplierfile=` argument to the function. This new file will have different dispersal multiplier matrices for different time sections. We will keep `section=TRUE` to state that the tree will be sectioned according to our time periods.
+#### DEC2 - a model with time stratification
+
+As you know, the position of continents has changed over time. Felidae is a relatively young group (we inferred the root of the tree being ca. 16 MYA) and the position of continets hasn't changed so much since then, but there are some changes and we'll explore this by adding time stratification into our models and providing different dispersal multiplier matrices for the different time periods.
+
+We will divide the time into two periods: one between 20 and 12 mya and one between 12 and 0 mya. For the most recent time period, we will use the same dispersal multipliers as in DEC1. For the older period (20-12 mya), there are several differences in the dispersal multipliers. Download the DEC2 dispersal multiplier matrix from [here](../../Data/Day4/Biogeography/) and have a look at the dispersal rate multipliers for the older period. Can you spot the differences in values between some regions? Which regions are these and why are there such differences?
+
+Let us run this final DEC model using the wrapper function.
+
+We need to specify `section=TRUE` to state that the tree will be sectioned according to our time periods.
 
 ```R
 run_dec(treefile = "FelidaeTimes_pruned_no_F_catus.tre", geofile = "Felidae_biogeo_data.txt",
-        multiplierfile = "DEC2_dispersal_multipliers_NA_NT_disp_2mya.txt", maxrange = 2, timesfile = "time_periods.txt",
-        resultsfile = "DEC2_result.Rdata", section=TRUE)
-```
-
-For the DEC3 model, we will specify a different file for the `multiplierfile=` argument to the function. This new file will have different dispersal multiplier matrices for different time sections. We will keep `section=TRUE` to state that the tree will be sectioned according to our time periods.
-
-```R
-run_dec(treefile = "FelidaeTimes_pruned_no_F_catus.tre", geofile = "Felidae_biogeo_data.txt",
-        multiplierfile = "DEC3_dispersal_multipliers_NA_NT_disp_20mya.txt", maxrange = 2, timesfile = "time_periods.txt",
-        resultsfile = "DEC3_result.Rdata", section=TRUE)
+        multiplierfile = "DEC2_dispersal_multipliers_time_strat.txt", maxrange = 2, timesfile = "time_periods.txt",
+        resultsfile = "DEC1_result.Rdata", section=TRUE)
 ```
 
 
@@ -195,15 +190,12 @@ res_DEC1 = res
 load("DEC2_result.Rdata")
 res_DEC2 = res
 
-load("DEC3_result.Rdata")
-res_DEC3 = res
-rm(res)
 ```
 
 Try this:
 
 ```R
-results = list(DEC0=res_DEC0, DEC1=res_DEC1, DEC2=res_DEC2, DEC3=res_DEC3)
+results = list(DEC0=res_DEC0, DEC1=res_DEC1, DEC2=res_DEC2)
 get_table(results) 
 ```
 
@@ -211,10 +203,10 @@ you should see a table like below.
 
 ```
              d          e        lnL
-DEC0 0.1098281 0.01632345 -108.71644
-DEC1 0.1190936 0.01222044  -98.39584
-DEC2 0.1372908 0.01273235  -98.89240
-DEC3 0.1145382 0.01364884  -98.83538
+DEC0 2.8830376 0.00575560 -100.94224
+DEC1 0.1007832 0.01672941  -89.98125
+DEC2 0.1014298 0.01658964  -89.76118
+
 ```
 
 Now, we can statistically compare any time-stratified model against our null DEC0 model. We can compare DEC2 against DEC0 as an example:
