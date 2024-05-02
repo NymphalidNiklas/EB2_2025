@@ -228,6 +228,7 @@ stats$AIC1
 stats$AIC2
 ```
 
+
 Can you change the code to compare DEC1 and DEC2? Which model is the best fit to our data?
 
 <!--
