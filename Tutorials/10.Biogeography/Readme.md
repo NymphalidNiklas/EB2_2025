@@ -209,8 +209,26 @@ DEC2 0.1014298 0.01658964  -89.76118
 
 ```
 
-Now, we can statistically compare DEC1 and DEC2 models to our DEC0 model. For this comparison we will use the AIC values. AIC stands for Akaike Information Criterio. You can read more about it [here](https://www.scribbr.com/statistics/akaike-information-criterion/#:~:text=To%20compare%20models%20using%20AIC%2C%20you%20need%20to%20calculate%20the,calculating%20log%2Dlikelihood%20is%20complicated!).
+Now, we can statistically compare DEC1 and DEC2 models to our DEC0 model. For this comparison we will use the AIC values. AIC stands for Akaike Information Criterio. You can read more about it [here](https://www.scribbr.com/statistics/akaike-information-criterion/#:~:text=To%20compare%20models%20using%20AIC%2C%20you%20need%20to%20calculate%20the,calculating%20log%2Dlikelihood%20is%20complicated!). Basically, if a model has an AIC value that is more than two points lower, than that model is considered better.
 
+
+```R
+LnL_2 = get_LnL_from_BioGeoBEARS_results_object(res_DEC0)
+LnL_1 = get_LnL_from_BioGeoBEARS_results_object(res_DEC1)
+
+stats$AIC1
+stats$AIC2
+```
+
+```R
+LnL_2 = get_LnL_from_BioGeoBEARS_results_object(res_DEC0)
+LnL_1 = get_LnL_from_BioGeoBEARS_results_object(res_DEC2)
+
+stats$AIC1
+stats$AIC2
+```
+
+Can you change the code to compare DEC1 and DEC2? Which model is the best fit to our data?
 
 <!--
 ```R
@@ -222,11 +240,13 @@ stats
 ```
 --!>
 
+
 To plot the ancestral area resonctructions, we can use `plot_models()`:
 
 ```R
 plot_models(res_DEC0, "DEC0")
 ```
+
 
 You can also save this to a PDF file by:
 
