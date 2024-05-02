@@ -108,7 +108,13 @@ run_dec = function(treefile, ## Path to your tree file
     )
 ```
 
-#### DEC with no time stratification
+#### Model testing to answer relevant questions
+
+We can use BioGeoBEARS to answer specific hypotheses about our study group. In the case of cats, we could ask the question of how good the cats are at dispersal? What kind of signal is there in our data? We can design two models, one in which dispersal between the continents is limited (DEC0) and one in which we make dispersal between some continents easier than between others based on the current geography (DEC1). 
+
+Download the DEC0 and DEC1 dispersal multiplier matrices from [here](../../Data/Day4/Biogeography/) into your working directory and open them in a text editor to examine them. Do the differences between these models make sense given the current position of continents?
+
+#### DEC0 with no time stratification
 
 The first model that we are going to run is a simple model with just one dispersal rate multiplier matrix that doesn't change over time (no time stratification as explained above). Have a look at the values in the table and think about whether they make sense given the current position of continents and the large barriers to dispersal (e.g., Sahara dessert, oceans).
 
