@@ -156,7 +156,7 @@ Then repeat this for DEC1.
 ```R
 run_dec(treefile = "FelidaeTimes_pruned_no_F_catus.tre", geofile = "Felidae_biogeo_data.txt",
         multiplierfile = "DEC1_dispersal_multipliers_no_time.txt", maxrange = 2, timesfile = "time_periods.txt",
-        resultsfile = "DEC1_result.Rdata", section=TRUE)
+        resultsfile = "DEC1_result.Rdata", section=FALSE)
 ```
 
 #### DEC2 - a model with time stratification
