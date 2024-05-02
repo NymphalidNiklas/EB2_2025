@@ -239,7 +239,7 @@ LnL_1 = get_LnL_from_BioGeoBEARS_results_object(res_DEC0)
 stats = AICstats_2models(LnL_1, LnL_2, 2, 2)
 stats
 ```
---!>
+-->
 
 
 To plot the ancestral area resonctructions, we can use `plot_models()`:
