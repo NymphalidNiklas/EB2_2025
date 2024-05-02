@@ -145,7 +145,7 @@ To model DEC0, you can use the wrapper function like the example below (assuming
 
 ```R
 run_dec(treefile = "FelidaeTimes_pruned_no_F_catus.tre", geofile = "Felidae_biogeo_data.txt",
-        multiplierfile = "DEC0_dispersal_multipliers_no_diff.tx", maxrange = 2, timesfile = "time_periods.txt",
+        multiplierfile = "DEC0_dispersal_multipliers_no_diff.txt", maxrange = 2, timesfile = "time_periods.txt",
         resultsfile = "DEC0_result.Rdata", section=FALSE)
 ```
 
