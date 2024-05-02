@@ -92,7 +92,7 @@ We should start by running the following line of code by copying and pasting. Th
 source("https://raw.githubusercontent.com/NymphalidNiklas/EB2_2024/main/Data/Day4/Biogeography/run_dec_f.R")
 ```
 
-This wrapper function has several arguments we need to pass values to:
+This wrapper function has several arguments we need to pass values to. Have a look at the code below to get an understanding of how this works (but don't run this, this is just for clarification).
 
 ```R
 run_dec = function(treefile, ## Path to your tree file
