@@ -209,8 +209,10 @@ DEC2 0.1014298 0.01658964  -89.76118
 
 ```
 
-Now, we can statistically compare any time-stratified model against our null DEC0 model. We can compare DEC2 against DEC0 as an example:
+Now, we can statistically compare DEC1 and DEC2 models to our DEC0 model. For this comparison we will use the AIC values. AIC stands for Akaike Information Criterio. You can read more about it [here](https://www.scribbr.com/statistics/akaike-information-criterion/#:~:text=To%20compare%20models%20using%20AIC%2C%20you%20need%20to%20calculate%20the,calculating%20log%2Dlikelihood%20is%20complicated!).
 
+
+<!--
 ```R
 LnL_2 = get_LnL_from_BioGeoBEARS_results_object(res_DEC2)
 LnL_1 = get_LnL_from_BioGeoBEARS_results_object(res_DEC0)
@@ -218,6 +220,7 @@ LnL_1 = get_LnL_from_BioGeoBEARS_results_object(res_DEC0)
 stats = AICstats_2models(LnL_1, LnL_2, 2, 2)
 stats
 ```
+--!>
 
 To plot the ancestral area resonctructions, we can use `plot_models()`:
 
