@@ -110,21 +110,34 @@ run_dec = function(treefile, ## Path to your tree file
 
 #### Model testing to answer relevant questions
 
-We can use BioGeoBEARS to answer specific hypotheses about our study group. In the case of cats, we could ask the question of how good the cats are at dispersal? What kind of signal is there in our data? We can design two models, one in which dispersal between the continents is limited (DEC0) and one in which we make dispersal between some continents easier than between others based on the current geography (DEC1). 
+We can use BioGeoBEARS to answer specific hypotheses about our study group. In the case of cats, we could ask the question of how good the cats are at dispersal? What kind of signal is there in our data? 
+
+We can design two models, one in which dispersal between the continents doesn't depend on the geography (DEC0) and one in which we make dispersal between some continents easier than between others based on the current continet positions (DEC1). Our expectation is that dispersal for cats is much more difficult from e.g. the Nearctic to the Oriental Region than from the Nearctic to the Neotropics and this is reflected in the dispersal multiplier matrix for DEC1.
 
 Download the DEC0 and DEC1 dispersal multiplier matrices from [here](../../Data/Day4/Biogeography/) into your working directory and open them in a text editor to examine them. Do the differences between these models make sense given the current position of continents?
 
-#### DEC0 with no time stratification
+#### Comparison of DEC0 and DEC1 models - does limiting dispersal between some continents improve model fit?
 
 The first model that we are going to run is a simple model with just one dispersal rate multiplier matrix that doesn't change over time (no time stratification as explained above). Have a look at the values in the table and think about whether they make sense given the current position of continents and the large barriers to dispersal (e.g., Sahara dessert, oceans).
 
+DEC0
+
+|    | O  | AT | PA | N  | NT |
+|----|----|----|----|----|----|
+| O  | 1  | 1  | 1  | 1  | 1  |
+| AT | 1  | 1  | 1  | 1  | 1  |
+| PA | 1  | 1  | 1  | 1  | 1  |
+| N  | 1  | 1  | 1  | 1  | 1  |
+| NT | 1  | 1  | 1  | 1  | 1  |
+
+DEC1
 
 |    | O    | AT   | PA   | N    | NT   |
 |----|------|------|------|------|------|
-| O  | 1    | 0.01 | 1    | 0.01 | 0.01 |
-| AT | 0.01 | 1    | 0.01 | 0.01 | 0.01 |
-| PA | 1    | 0.01 | 1    | 1    | 1    |
-| N  | 0.01 | 0.01 | 1    | 1    | 1    |
+| O  | 1    | 0.1  | 1    | 0.01 | 0.01 |
+| AT | 0.1  | 1    | 1    | 0.01 | 0.01 |
+| PA | 1    | 1    | 1    | 0.1  | 0.01 |
+| N  | 0.01 | 0.01 | 0.1  | 1    | 1    |
 | NT | 0.01 | 0.01 | 0.01 | 1    | 1    |
 
 
@@ -132,7 +145,7 @@ To model DEC0, you can use the wrapper function like the example below (assuming
 
 ```R
 run_dec(treefile = "FelidaeTimes_pruned_no_F_catus.tre", geofile = "Felidae_biogeo_data.txt",
-        multiplierfile = "DEC0_dispersal_multipliers_no_time_strat.txt", maxrange = 2, timesfile = "time_periods.txt",
+        multiplierfile = "DEC0_dispersal_multipliers_no_diff.tx", maxrange = 2, timesfile = "time_periods.txt",
         resultsfile = "DEC0_result.Rdata", section=FALSE)
 ```
 
