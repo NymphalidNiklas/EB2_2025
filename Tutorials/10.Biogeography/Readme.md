@@ -172,7 +172,7 @@ We need to specify `section=TRUE` to state that the tree will be sectioned accor
 ```R
 run_dec(treefile = "FelidaeTimes_pruned_no_F_catus.tre", geofile = "Felidae_biogeo_data.txt",
         multiplierfile = "DEC2_dispersal_multipliers_time_strat.txt", maxrange = 2, timesfile = "time_periods.txt",
-        resultsfile = "DEC1_result.Rdata", section=TRUE)
+        resultsfile = "DEC2_result.Rdata", section=TRUE)
 ```
 
 
