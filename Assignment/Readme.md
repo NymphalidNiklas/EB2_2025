@@ -17,4 +17,4 @@ Make a short report including the resulting maximum likelihood tree with branch 
 
 If you have any questions about the assignment, feel free to email us.
 
-The report is due on Friday, May 3 by midnight, and it is being graded on the pass/fail scale.
+The report is due on Friday, May 9 by midnight, and it is being graded on the pass/fail scale.
