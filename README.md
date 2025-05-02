@@ -40,7 +40,7 @@ In this course we will learn in practice how to download data from GenBank, crea
 
 ### [Course assignment](./Assignment/)
 
-Here are the details for the pass/fail assignment that you need to complete by Friday May 3.
+Here are the details for the pass/fail assignment that you need to complete by Friday May 9.
 
 ### [Course slides](./Lectures/)
 
