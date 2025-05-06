@@ -80,6 +80,8 @@ Now click on *`Save to disk`* and save the `alignment.fasta` file on your comput
 
 Open Aliview and open the file you just created in it. Take a look at it to see if it seems good to you. Now save it as a Phylip file by going to `File` and clicking on `Save as Phylip (full names & padded)`. Give the name `ATP6_COI_CytB_ND5.phy`
 
+<p align="center"><img src="./concatenation_illustration.png" alt="conc" width="800"></p>
+
 So now we have an alignment of 4 concatenated genes in a single alignment file. But what we don't see immediately in this "*Super Gene*" alignment is where each gene starts and ends in the alignment. One way to obtain this information is to open each gene's alignment `FelidaeATP6.fasta`, `FelidaeCOI.fasta`, `FelidaeCytB.fasta` and `FelidaeND5.fasta` in *Aliview* and look at their lengths. In our concatenated matrix we know the order of the genes, so you can obtain the position of each gene easily. Create a file in your text editor called `Gene_partitions.txt` and write down the information of each gene as:
 
 ```
