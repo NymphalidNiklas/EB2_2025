@@ -226,6 +226,8 @@ stats$AIC2
 LnL_2 = get_LnL_from_BioGeoBEARS_results_object(res_DEC0)
 LnL_1 = get_LnL_from_BioGeoBEARS_results_object(res_DEC2)
 
+stats = AICstats_2models(LnL_1, LnL_2, 2, 2)
+
 stats$AIC1
 stats$AIC2
 ```
