@@ -115,8 +115,6 @@ Click on the **Run** button to check that the file is configured correctly and t
 
 Instead of running this analysis on our computers, we will upload our `Felidae.xml` file onto a server and run it there. One such server is the [CIPRES portal](https://www.phylo.org/portal2/login!input.action). Create a user account, and upload your file into the **Data** folder. Go to the **Tasks** folder and click on the `Create New Task` button. Write `Felidae` in the **Description** box, select `Felidae.xml` in `Select Input Data`, under `Select Tool` choose **BEAST2 on ACCESS (2.7.6) - Bayesian Evolutionary Analysis by Sampling Trees - run on XSEDE**, and finally for the **Input Parameters** select the following:
 
-<!-- <p align="center"><img src="./CIPRES1.png" alt="CIPRES1" width="800"></p> --!>
-
 <p align="center"><img src="./Screenshot 2024-04-29 at_CIPRES.png" alt="Screenshot 2024-04-29 at_CIPRES" width="800"></p>
 
 Once you have saved the parameters (and clicked on **OK** twice), you are ready to run your analysis on CIPRES, just click on `Save and Run Task`, and wait for an email to tell you it is ready! It'll take about one hour.
