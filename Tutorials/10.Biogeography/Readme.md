@@ -209,7 +209,7 @@ DEC2 0.10142983 0.01658964  -89.76118
 
 ```
 
-Now, we can statistically compare DEC1 and DEC2 models to our DEC0 model. For this comparison we will use the AIC values. AIC stands for Akaike Information Criterio. You can read more about it [here](https://www.scribbr.com/statistics/akaike-information-criterion/#:~:text=To%20compare%20models%20using%20AIC%2C%20you%20need%20to%20calculate%20the,calculating%20log%2Dlikelihood%20is%20complicated!). Basically, if a model has an AIC value that is more than two points lower, than that model is considered better.
+Now, we can statistically compare DEC1 and DEC2 models to our DEC0 model. For this comparison we will use the AIC values. AIC stands for Akaike Information Criterion. You can read more about it [here](https://www.scribbr.com/statistics/akaike-information-criterion/#:~:text=To%20compare%20models%20using%20AIC%2C%20you%20need%20to%20calculate%20the,calculating%20log%2Dlikelihood%20is%20complicated!). Basically, if a model has an AIC value that is more than two points lower, than that model is considered better.
 
 
 ```R
