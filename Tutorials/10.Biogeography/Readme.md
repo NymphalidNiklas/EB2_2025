@@ -89,7 +89,7 @@ After a successful installation, you should ***close your RStudio program and re
 We should start by running the following line of code by copying and pasting. This will allow you to use a wrapper function to use BioGeoBEARS in a more user friendly way.
 
 ```R
-source("https://raw.githubusercontent.com/NymphalidNiklas/EB2_2024/main/Data/Day4/Biogeography/run_dec_f.R")
+source(paste("https://raw.githubusercontent.com/NymphalidNiklas/EB2_",format(Sys.time(), "%Y") , "/main/Data/Day4/Biogeography/run_dec_f.R", sep=""))
 ```
 
 This wrapper function has several arguments we need to pass values to. Have a look at the code below to get an understanding of how this works (but don't run this, this is just for clarification).
